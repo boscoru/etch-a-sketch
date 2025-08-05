@@ -1,5 +1,6 @@
 const contEdge = 800;
 const container = document.querySelector("#container");
+const resButton = document.querySelector("button");
 
 function fillContainer(edgeNum) {
     let squareCount = edgeNum * edgeNum;
@@ -13,12 +14,22 @@ function fillContainer(edgeNum) {
     }
 }
 
+function setResolution(e) {
+    let ques = Number(prompt("How many squares per side?"));
+    if ( ques < 2 || ques > 100 || !Number.isInteger(ques)) alert("Invalid! Must be integer from 2 through 100!");
+    else {
+        container.replaceChildren();
+        fillContainer(ques);
+    }
+}
+
 function change(e) {
     let square = document.getElementById(`${e.target.id}`);
-    square.style.backgroundColor = "darkgray";
+    if ( `${e.target.id}` != "container" ) square.style.backgroundColor = "darkgray";
 }
 
 let edgeNum = 16;
 fillContainer(edgeNum);
 
 container.addEventListener('mouseover', change);
+resButton.addEventListener('click', setResolution);
