@@ -3,7 +3,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
+}
+
+#header {
+    display: flex;
+    gap: 24px;
 }
 
 #container {
@@ -20,10 +25,51 @@ body {
 }
 
 button {
+    font-size:  24px;
+    padding: 8px;
+    border-radius: 12px;
+    font-family: arial;
+    width: 130px;
+}
+
+#resolution {
     border: 0;
     background-color: darkblue;
     color: white;
     font-size:  24px;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 12px;
+    font-family: arial;
+}
+
+#normal {
+    border: 2px;
+    border-color: darkgrey;
+    border-style: solid;
+    background-color: white;
+    color: darkgrey;
+    font-size:  24px;
+    padding: 8px;
+    border-radius: 12px;
+    font-family: arial;
+}
+
+#rainbow {
+    border: 0;
+    background-image: linear-gradient(to bottom right, red,orange,yellow,green,blue,indigo,violet);
+    color: black;
+    font-size:  24px;
+    padding: 8px;
+    border-radius: 12px;
+    font-family: arial;
+}
+
+#gradient {
+    border: 0;
+    background-image: linear-gradient(to bottom right, black, darkgrey);
+    color: white;
+    font-size:  24px;
+    padding: 8px;
+    border-radius: 12px;
+    font-family: arial;
 }
